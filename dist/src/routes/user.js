@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.userRoutes = void 0;
+const hono_1 = require("hono");
+const userController_1 = require("../controllers/userController");
+const authMiddleware_1 = require("../middlewares/authMiddleware");
+const userController = new userController_1.UserController();
+const authMiddleware = new authMiddleware_1.AuthMiddleware();
+exports.userRoutes = new hono_1.Hono();
+exports.userRoutes.post('/signup', userController.signUp.bind(userController));
+exports.userRoutes.post('/signin', userController.signIn.bind(userController));
+exports.userRoutes.get('/:id', userController.getOne.bind(userController));
+exports.userRoutes.patch('/:id', userController.update.bind(userController));
+exports.userRoutes.delete('/:id', userController.delete.bind(userController));
+exports.userRoutes.get('/profile', authMiddleware.checkAuthHeader, authMiddleware.validateAccessToken, userController.getProfile.bind(userController));
