@@ -1,0 +1,65 @@
+# Ignore system files and directories
+/Application Data/
+/Cookies/
+/Documents/My Music/
+/Documents/My Pictures/
+/Documents/My Videos/
+/Local Settings/
+/My Documents/
+/NetHood/
+/PrintHood/
+/Recent/
+/SendTo/
+/Start Menu/
+/Templates/
+
+# Ignore common user directories
+../../../3D Objects/
+../../../Desktop/
+../../../Documents/
+../../../Downloads/
+../../../Music/
+../../../Pictures/
+../../../Videos/
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.log
+*.tmp
+
+# Ignore personal or unnecessary files C:\Users\JAHNAVI\Documents\Orotron\api-filemanager-v\.gitignore
+../../../*.pdf
+../../../*.docx
+../../../*.xlsx
+
+# dev
+.yarn/
+!.yarn/releases
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
+
+# deps
+node_modules/
+
+# env
+.env
+.env.production
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# misc
+.DS_Store
+
+gitchanger.sh
